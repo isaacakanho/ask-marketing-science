@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Mindshare - Ask Marketing Science</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+
+
+  <nav role="navigation">
+    <div class="nav-wrapper purple darken-4" >
+      <a href="#" id="logo-container" class="brand-logo"><img src="static\images\mindshare_logo" alt="Mindshare" style="width:150px;height:64px;"></a>
+      <ul class="right hide-on-med-and-down">
+
+        <li><a href="http://localhost:5000/login">Login</a></li>
+
+        <li>
+            <form>
+			<div class="input-field">
+			<input id="search" type="search" required>
+			<label for="search"><i class="material-icons">search</i></label>
+			<i class="material-icons">close</i>
+        </li>
+
+        </ul>
+
+              <ul id="nav-mobile" class="side-nav">
+
+        <li><a href="http://localhost:5000/login">Login</a></li>
+
+        <li>
+            <form>
+			<div class="input-field">
+			<input id="search" type="search" required>
+			<label for="search"><i class="material-icons">search</i></label>
+			<i class="material-icons">close</i>
+        </li>
+
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center black-text">Ask Marketing Science</h1>
+      <div class="row center">
+
+      </div>
+      <div class="row center centre-align ">
+	  <div class="row">
+
+
+  <div class="row">
+    <form action="/" method="post" class="col s12">
+
+        <div class="row">
+        <div class="input-field col s12">
+            <label for="question">Post Your Question</label>
+            <input  type="text" name="question" id="question" class="materialize-textarea">
+            <input type="submit" value="Submit">
+
+
+        </div>
+        </div>
+
+
+    </form>
+  </div>
+
+
+
+          {% for message in dt %}
+
+                		<div class="card card-image waves-effect waves-block waves-light col s6 card-reveal card-content" >
+                        <img class="activator" src="static\images\question.jpg">
+                        <span class="card-title activator grey-text text-darken-4"> {{ message.0 }} </span>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Answer<i class="material-icons right">close</i></span>
+                        <p> {{ message.1 }} </p>
+                        </div>
+                        </div>
+
+          {% endfor %}
+	  
+
+      </div>
+
+      </div>
+ 
+
+
+  </div>
+
+
+  <div class="container">
+    <div class="section
+
+      <!--   Icon Section   -->
+
+
+    </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+
+  <footer class="page-footer purple darken-4">
+    <div class="container">
+      <div class="row center">
+        <div class="col l8 m8 s12 offset-l2 offset-m2" >
+                                        <a class="col s2 purple-text text-lighten-4" href="http://www.youtube.com/user/MindshareWW" target="_blank" > YOUTUBE </a>
+                                        <a class="col s2 purple-text text-lighten-4" href="https://instagram.com/mindshare" target="_blank" > INSTAGRAM </a>
+                                        <a class="col s2 purple-text text-lighten-4" href="https://twitter.com/mindshare" target="_blank" > TWITTER </a>
+                                        <a class="col s2 purple-text text-lighten-4" href="https://www.facebook.com/Mindshare" target="_blank" > FACEBOOK </a>
+                                        <a class="col s2 purple-text text-lighten-4" href="http://www.linkedin.com/company/mindshare" target="_blank" > LINKEDIN </a>
+                                        <a class="col s2 purple-text text-lighten-4" href="http://www.glassdoor.com/Overview/Working-at-Mindshare-EI_IE35287.11,20.htm" target="_blank" > GLASSDOOR </a>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="purple-text text-lighten-4" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+	  
+	  
+	  
+    <div class="footer-copyright">
+      <div class="container">
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="static/js/materialize.js"></script>
+  <script src="static/js/init.js"></script>
+
+  </body>
+</html>
